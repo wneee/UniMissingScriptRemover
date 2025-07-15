@@ -16,10 +16,10 @@ namespace Kogane.Internal
 		// 定数
 		//================================================================================
 		private const string ITEM_NAME_ROOT                       = "Edit/UniMissingScriptRemover/";
-		private const string ITEM_NAME_REMOVE_FROM_CURRENT_SCENE  = "開いているシーンから Missing Script を削除";
-		private const string ITEM_NAME_REMOVE_FROM_ALL_SCENES     = "すべてのシーンから Missing Script を削除";
-		private const string ITEM_NAME_REMOVE_FROM_CURRENT_PREFAB = "開いているプレハブから Missing Script を削除";
-		private const string ITEM_NAME_REMOVE_FROM_ALL_PREFABS    = "すべてのプレハブから Missing Script を削除";
+		private const string ITEM_NAME_REMOVE_FROM_CURRENT_SCENE  = "Удалить Missing Script из открытой сцены";
+		private const string ITEM_NAME_REMOVE_FROM_ALL_SCENES     = "Удалить Missing Script из всех сцен";
+		private const string ITEM_NAME_REMOVE_FROM_CURRENT_PREFAB = "Удалить Missing Script из открытого префаба";
+		private const string ITEM_NAME_REMOVE_FROM_ALL_PREFABS    = "Удалить Missing Script из всех префабов";
 		private const string PACKAGE_NAME                         = "UniMissingScriptRemover";
 
 		//================================================================================
