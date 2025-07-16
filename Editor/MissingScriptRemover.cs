@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 namespace Kogane.Internal
 {
 	/// <summary>
-	/// シーンやプレハブから Missing Script を削除するエディタ拡張
+	/// Расширение редактора для удаления Missing Script из сцен или префабов
 	/// </summary>
 	internal static class MissingScriptRemover
 	{
@@ -31,13 +31,13 @@ namespace Kogane.Internal
 		[MenuItem( ITEM_NAME_ROOT + ITEM_NAME_REMOVE_FROM_CURRENT_SCENE )]
 		private static void RemoveFromCurrentScene()
 		{
-			if ( !OpenOkCancelDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_SCENE}しますか？" ) ) return;
+			if ( !OpenOkCancelDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_SCENE}Выполнить?" ) ) return;
 
 			var scene = SceneManager.GetActiveScene();
 
 			RemoveFromScene( scene );
 
-			OpenOkDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_SCENE}しました" );
+			OpenOkDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_SCENE}Выполнено" );
 		}
 
 		/// <summary>
@@ -46,7 +46,7 @@ namespace Kogane.Internal
 		[MenuItem( ITEM_NAME_ROOT + ITEM_NAME_REMOVE_FROM_ALL_SCENES )]
 		private static void RemoveFromAllScenes()
 		{
-			if ( !OpenOkCancelDialog( $"{ITEM_NAME_REMOVE_FROM_ALL_SCENES}しますか？" ) ) return;
+			if ( !OpenOkCancelDialog( $"{ITEM_NAME_REMOVE_FROM_ALL_SCENES}Выполнить?" ) ) return;
 
 			var sceneSetups = EditorSceneManager.GetSceneManagerSetup();
 
@@ -93,7 +93,7 @@ namespace Kogane.Internal
 				}
 			}
 
-			OpenOkDialog( $"{ITEM_NAME_REMOVE_FROM_ALL_SCENES}しました" );
+			OpenOkDialog( $"{ITEM_NAME_REMOVE_FROM_ALL_SCENES}Выполнено" );
 		}
 
 		/// <summary>
@@ -102,13 +102,13 @@ namespace Kogane.Internal
 		[MenuItem( ITEM_NAME_ROOT + ITEM_NAME_REMOVE_FROM_CURRENT_PREFAB )]
 		private static void RemoveFromCurrentPrefab()
 		{
-			if ( !OpenOkCancelDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_PREFAB}しますか？" ) ) return;
+			if ( !OpenOkCancelDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_PREFAB}Выполнить?" ) ) return;
 
 			var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
 
 			RemoveFromPrefab( prefabStage.prefabContentsRoot );
 
-			OpenOkDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_PREFAB}しました" );
+			OpenOkDialog( $"{ITEM_NAME_REMOVE_FROM_CURRENT_PREFAB}Выполнено" );
 		}
 
 		/// <summary>
